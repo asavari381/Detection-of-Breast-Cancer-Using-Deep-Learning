@@ -1,4 +1,4 @@
-import json
+code = ''import json
 
 import numpy as np
 import pandas as pd
@@ -432,4 +432,7 @@ def test_model_evaluation(y_true: list, predictions, label_encoder: LabelEncoder
                            index=[0])  # Add model result into dataframe to compare.
     df = pd.concat([new_row, df]).reset_index(drop=True)
     df['accuracy'] = pd.to_numeric(df['accuracy'])  # Digitize the accuracy column.
-    plot_comparison_chart(df)
+    plot_comparison_chart(df)'
+
+'''withopen("cnn_model.py", "w") as file:
+    file.write(code)
